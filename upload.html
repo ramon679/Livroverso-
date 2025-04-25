@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Postar eBook - Livroverso</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://www.gstatic.com/firebasejs/10.9.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.9.0/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.9.0/firebase-firestore.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.9.0/firebase-storage.js"></script>
+  <script src="firebase-config.js" defer></script>
+  <script src="js/upload.js" defer></script>
+</head>
+<body>
+  <header>
+    <h1><span class="colorido">Livroverso</span></h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Início</a></li>
+        <li><a href="upload.html">Postar eBook</a></li>
+        <li><a href="favoritos.html">Favoritos</a></li>
+        <li><a href="login.html">Entrar</a></li>
+        <li><a href="register.html" target="_blank">Criar Conta</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section class="form-section">
+      <h2>Postar Novo eBook</h2>
+      <form id="uploadForm">
+        <input type="text" id="titulo" placeholder="Título do eBook" required><br>
+        <input type="text" id="autor" placeholder="Autor do eBook" required><br>
+        <input type="file" id="arquivo" accept="application/pdf" required><br>
+        <button type="submit">Publicar</button>
+      </form>
+      <p id="mensagem"></p>
+    </section>
+  </main>
+</body>
+</html>
